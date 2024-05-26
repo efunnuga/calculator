@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.container {
+    
+    padding: 10px;
+    margin: 25px;
+    
+   
+}
+.calq-div {
+    display: flex;
+    justify-content: space-between;
+}
+.first-calc {
+    display: flex;
+    gap: 5px;
+}
+.star-div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.first-star {
+    display: flex;
+    gap: 5px;
+    font-family: fantasy;
+}
+
+input {
+    font-weight: bold;
+    font-size: 30px;
+    width: 100%;
+    height: 10vh;
+
+}
+.inp-div {
+    margin-top: 30px;
+}
+.signs{
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.but-div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.first-but {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.but-div .first-but button {
+    width: 30%;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    
+}
+
+.calc-dive {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+ 
+.history span {
+   border: 1px solid black;
+   border-radius: 100px;
+   background-color: gray;
+}

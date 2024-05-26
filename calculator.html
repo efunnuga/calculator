@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body id="body$">
+    <div class="container">
+        <div class="calq-div">
+            <div class="first-calc">
+                <div>
+                    <!-- <span class="material-symbols-outlined">
+                        calculate
+                    </span> -->
+                </div>
+                <div>
+                    <div id="calc$" class="calc-dive">calculator</div>
+                </div>
+            </div>
+
+            <div class="scn-calc">
+                <span class="material-symbols-outlined">
+                    radio_button_unchecked
+                </span>
+                <span class="material-symbols-outlined">
+                    radio_button_unchecked
+                </span>
+                <span class="material-symbols-outlined">
+                    radio_button_unchecked
+                </span>
+
+            </div>
+
+        </div>
+        <div class="star-div">
+            <div class="first-star">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+                
+                <h3>Standard</h3>
+                
+                
+            </div>
+            <div class="history">
+                <span class="material-symbols-outlined" onclick="mode$()">
+                    radio_button_unchecked
+                </span>
+            </div>
+        </div>
+        <div class="inp-div"><input type="text" id="inpt$" readonly></div>
+        <div class="signs">
+            <div>MC</div>
+            <div>MR</div>
+            <div>M+</div>
+            <div>M-</div>
+            <div>MS</div>
+            <div>M</div>
+        </div>
+        <div class="but-div">
+            <div class="first-but">
+               <button>%</button>
+               <button onclick="clear$()">CE</button>
+               <button></button>
+               <button onclick="inpt$.value = inpt$.value.toString().slice(0, -1)">DEL</button>
+            </div>
+            <div class="first-but">
+                <button onclick="display$('/100')">%</button>
+                <button onclick="inpt$.value += 'CE' ">CE</button>
+                <button onclick="inpt$.value += '.' ">.</button>
+                <button onclick="display$('/') ">/</button>
+             </div>
+             <div class="first-but">
+                <button onclick="display$('7')">7</button>
+                <button onclick="display$('8')">8</button>
+                <button onclick="display$('9')">9</button>
+                <button onclick="display$('*')">*</button>
+             </div>
+             <div class="first-but">
+                <button onclick="display$('4')">4</button>
+                <button onclick="display$('5')">5</button>
+                <button onclick="display$('6')">6</button>
+                <button onclick="display$('-')">-</button>
+             </div>
+             <div class="first-but">
+                <button onclick="display$('1')">1</button>
+                <button onclick="display$('2')">2</button>
+                <button onclick="display$('3')">3</button>
+                <button onclick="display$('+')">+</button>
+             </div>
+             <div class="first-but">
+                <button onclick="display$('0')">0</button>
+                <button>CE</button>
+                <button>C</button>
+                <button onclick="calculate()">=</button>
+             </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+  let body$ = document.getElementById('body$') 
+  let inpt$ = document.getElementById('inpt$')
+  let calc$ = document.getElementById('calc$')
+  
+  function display$(numbers$) {
+      inpt$.value += numbers$
+  }
+
+  function calculate() {
+       
+        inpt$.value = eval(inpt$.value);
+       
+  }
+
+  function clear$() {
+    inpt$.value = ''
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  function mode$() {
+
+     if (body$.style.background === 'antiquewhite') {
+         body$.style.background = 'black' 
+     } else {
+         body$.style.background = 'antiquewhite', calc$.style.color = 'white'
+     }
+  }
+
+
+
+  
+</script>
